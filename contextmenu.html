@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义右键菜单</title>
+		<style type="text/css">
+			body {
+				margin: 0;
+				-webkit-user-select: none;
+				-moz-user-select: none;
+				-ms-user-select: none;
+			}
+			
+			#a1 {
+				width: 350px;
+				height: 200px;
+				line-height: 200px;
+				text-align: center;
+				background: #3ff;
+			}
+			
+			#contenxmenu {
+				position: absolute;
+				width: 100px;
+				padding: 0;
+				margin: 0;
+				display: none;
+				box-shadow: 0 0 7px rgba(0,0,0,.4);
+				transition: all .3s;
+				z-index: 1000;
+				background: #fff;
+			}
+			
+			.split {
+				margin: 5px 0;
+				height: 1px;
+				list-style: none;
+				background-color: #f0f0f0;
+			}
+			
+			.item {
+				cursor: pointer;
+				padding: 5px 10px 5px 20px;
+				transition: all .1s;
+				list-style: none;
+				
+			}
+			
+			.item:hover {
+				background: #e5e5e5;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="a1">右击我，会看到别样的菜单</div>
+
+		<ul id="contenxmenu">
+			<li class="item">返回</li>
+			<li class="item">前进</li>
+			<li class="item">重新加载</li>
+
+			<li class="split"></li>
+
+			<li class="item">属性</li>
+		</ul>
+
+		<script type="text/javascript">
+			var $a1 = document.getElementById("a1");
+			var $menu = document.getElementById("contenxmenu");
+			var $menu = document.getElementById("contenxmenu");
+
+			window.addEventListener('mousedown', function (e) {
+				if (e.button === 2 && e.target.id === 'a1') {
+					e.stopPropagation();
+					e.preventDefault();
+
+					var pageX = e.pageX,
+						pageY = e.pageY;
+
+					$menu.style.left = pageX + 'px';
+					$menu.style.top = pageY + 'px';
+					$menu.style.display = 'block';
+				} else {
+					$menu.style.display = 'none';
+				}
+			});
+
+			// 去除div的右击默认菜单
+			$a1.addEventListener('contextmenu', function (e) {
+				e.stopPropagation();
+				e.preventDefault();
+			});
+
+			$menu.addEventListener('contextmenu', function (e) {
+				e.stopPropagation();
+				e.preventDefault();
+			});
+		</script>
+
+	</body>
+
+</html>
