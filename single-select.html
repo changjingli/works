@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>页面单选</title>
+	<style>
+		.hidden {
+			display: none;
+		}
+
+		.flex-container {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: flex;
+		}
+
+		.nav {
+			flex: 0 0 100px;
+		}
+
+		.label {
+			display: block;
+
+			padding: 10px;
+			margin-top: -1px;
+
+			text-align: center;
+
+			border: 1px solid #e8e8e8;
+		}
+
+		.label:hover {
+			cursor: pointer;
+			color: #ed4040;
+		}
+
+		/* ============ */
+		.content {
+			margin-left: 8px;
+		}
+
+		.content-hidden {
+			display: none;
+		}
+
+		input:checked ~ div[id*="_C"] {
+			display: block;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="wapper">
+
+		<div class="flex-container">
+			<div class="nav">
+				<label class="label" for="R_M1">新闻</label>
+				<label class="label" for="R_M2">娱乐</label>
+				<label class="label" for="R_M3">军事</label>
+				<label class="label" for="R_M4">段子</label>
+				<label class="label" for="R_M5">社会</label>
+				<label class="label" for="R_M6">科技</label>
+			</div>
+
+			<div class="content">
+				<div class="item">
+					<input class="hidden" type="radio" name="menu" id="R_M1" checked >
+					<div class="content-hidden" id="R_M1_C">新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻新闻</div>
+				</div>
+
+				<div class="item">
+					<input class="hidden" type="radio" name="menu" id="R_M2">
+					<div class="content-hidden" id="R_M2_C">娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐娱乐</div>
+				</div>
+
+				<div class="item">
+					<input class="hidden" type="radio" name="menu" id="R_M3">
+					<div class="content-hidden" id="R_M3_C">军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事军事</div>
+				</div>
+
+				<div class="item">
+					<input class="hidden" type="radio" name="menu" id="R_M4">
+					<div class="content-hidden" id="R_M4_C">段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子段子</div>
+				</div>
+
+				<div class="item">
+					<input class="hidden" type="radio" name="menu" id="R_M5">
+					<div class="content-hidden" id="R_M5_C">社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会社会</div>
+				</div>
+
+				<div class="item">
+					<input class="hidden" type="radio" name="menu" id="R_M6">
+					<div class="content-hidden" id="R_M6_C">科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技科技</div>
+				</div>
+
+			</div>
+		</div>
+
+
+	</div>
+</body>
+</html>
