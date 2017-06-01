@@ -4,23 +4,52 @@
 	<meta charset="UTF-8">
 	<title>gradient</title>
 	<style type="text/css">
+		pre {
+			white-space: pre-line;
+			margin: 0;
+		}
+
+		code {
+			line-height: 2;
+		}
+
 		.g {
-			width: 200px;
+			width: 500px;
 			height: 150px;
 
 			margin: 20px auto;
+			padding: 1em;
 		}
 
 		.g1 {
-			background: #ccc;
-			background: linear-gradient(45deg, #ccc, #f88, #0f0, #00f);
+			background: linear-gradient(#fb3 20%, #58a 80%);
+		}
+
+		.g2 {
+			background: linear-gradient(#fb3 50%, #58a 50%);
+		}
+
+		.g3 {
+			background: linear-gradient(#fb3, 50%, #58a 0);
+			background-size: 100% 50px;
 		}
 	</style>
 </head>
 <body>
-	<div class="g g1"></div>
-	<div class="g g2"></div>
-	<div class="g g3"></div>
+	<div class="g g1">
+		<code>background: linear-gradient(#fb3 20%, #58a 80%);</code>
+	</div>
+	<div class="g g2">
+		<code>background: linear-gradient(#fb3 50%, #58a 50%);</code>
+	</div>
+	<div class="g g3">
+		<pre>
+			<code>
+				background: linear-gradient(#fb3, 50%, #58a 0);
+				background-size: 100% 30px;
+			</code>
+		</pre>
+	</div>
 	<div class="g g4"></div>
 	<div class="g g5"></div>
 	<div class="g g6"></div>
