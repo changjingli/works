@@ -14,7 +14,7 @@
 		}
 
 		.g {
-			width: 500px;
+			width: 750px;
 			height: 150px;
 
 			margin: 20px auto;
@@ -30,8 +30,23 @@
 		}
 
 		.g3 {
-			background: linear-gradient(#fb3, 50%, #58a 0);
+			background: linear-gradient(#fb3, 30%, #58a 0);
 			background-size: 100% 50px;
+		}
+
+		.g4 {
+			background: linear-gradient(to right, #fb3 50%, #58a 0);
+			background-size: 40px 100%;
+		}
+
+		.g5 {
+			background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+			background-size: 42px 42px;
+		}
+
+		.g6 {
+			background: repeating-linear-gradient(-45deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+			background-size: 42px 42px;
 		}
 	</style>
 </head>
@@ -50,9 +65,24 @@
 			</code>
 		</pre>
 	</div>
-	<div class="g g4"></div>
-	<div class="g g5"></div>
-	<div class="g g6"></div>
+	<div class="g g4">
+		<code>
+			background: linear-gradient(to right, #fb3 50%, #58a 0);
+			background-size: 40px 100%;
+		</code>
+	</div>
+	<div class="g g5">
+		<code>
+			background: linear-gradient(45deg, #fb3 25%, #58a 0, #58a 50%, #fb3 0, #fb3 75%, #58a 0);
+			background-size: 42px 42px;
+		</code>
+	</div>
+	<div class="g g6">
+		<code>
+			background: repeating-linear-gradient(-45deg, #fb3, #fb3 15px, #58a 0, #58a 30px);
+			background-size: 42px 42px;
+		</code>
+	</div>
 	<div class="g g7"></div>
 	<div class="g g8"></div>
 	<div class="g g9"></div>
