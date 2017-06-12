@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>focus-input</title>
+		<style type="text/css">
+			.search-list {
+				display: none;
+				position: absolute;
+				
+				padding: 0;
+				margin: 0;
+				margin-top: -1px;
+				
+				overflow: hidden;
+				
+				min-width: 178px;
+				box-sizing: content-box;
+				
+				border: 1px solid #ddd;
+				border-top: 0;
+				
+				list-style: none;
+			}
+			
+			.search-item {
+				margin-bottom: -1px;
+				padding-left: 1.1em;
+				
+				line-height: 1.5;
+				
+				border-top: 1px solid #ddd;
+				border-bottom: 1px solid #ddd;
+				border-left: 3px solid #fff;
+				
+				transition: all .1s;
+			}
+			
+			.search-item:hover {
+				color: red;
+				border-left-color: currentcolor;
+				cursor: pointer;
+			}
+			
+			#search_input {
+				width: 180px;
+				height: 30px;
+				border: 1px solid #ddd;
+				padding: .5em 1em;
+				box-sizing: border-box;
+			}
+			
+			#search_input:focus {
+				outline: 0;
+			}
+			
+			#search_input:focus + .search-list {
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="search">
+			<input type="text" name="search_input" id="search_input" placeholder="请输入文本" />
+			<ul class="search-list">
+				<li class="search-item">1111</li>
+				<li class="search-item">2222</li>
+				<li class="search-item">3333</li>
+				<li class="search-item">4444</li>
+				<li class="search-item">5555</li>
+				<li class="search-item">6666</li>
+				<li class="search-item">7777</li>
+			</ul>
+		</div>
+	</body>
+</html>

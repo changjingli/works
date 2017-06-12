@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<meta charset="UTF-8">
+		<title>responsive-buttons</title>
+		<style type="text/css">
+			.btn-list {
+				padding: 0;
+				font-size: 20px;
+				list-style: none;
+			}
+			
+			.btn-item {
+				margin: 1em 0;
+				text-align: center;
+			}
+			
+			.btn-yes {
+				padding: 6px 16px;
+				border: 1px solid #446d88;
+				background: #58a linear-gradient(#77a0bb, #58a);
+				border-radius: 4px;
+				box-shadow: 0 1px 5px gray;
+				color: white;
+				text-shadow: 0 -1px 1px #335166;
+				font-size: 20px;
+				line-height: 30px;
+			}
+			
+			.btn {
+				padding: .3em .8em;
+				border: 1px solid #446d88;
+				background: #58a linear-gradient(hsla(0, 0%, 100%, .2), transparent);
+				border-radius: .2em;
+				box-shadow: 0 .05em .25em rgba(0, 0, 0, .5);
+				color: white;
+				text-shadow: 0 -.05em .05em rgba(0, 0, 0, .5);
+				font-size: 100%;
+				line-height: 1.5;
+			}
+			
+			.btn.btn-ok {
+				background-color: #c00;
+			}
+			
+			.btn.btn-cancel {
+				background-color: #6b0;
+			}
+			
+			.btn.btn-add {
+				background-color: #3385ff;
+			}
+		</style>
+	</head>
+
+	<body>
+		<ul class="btn-list">
+			<li class="btn-item">
+				<button class="btn-yes">Yes!</button>
+			</li>
+			<li class="btn-item">
+				<button class="btn btn-yes">Yes!</button>
+			</li>
+			<li class="btn-item">
+				<button class="btn btn-ok">OK</button>
+			</li>
+			<li class="btn-item">
+				<button class="btn btn-cancel">Cancel</button>
+			</li>
+			<li class="btn-item">
+				<button class="btn btn-add">点我放大字号，仔细观察按钮变化</button>
+			</li>
+		</ul>
+		
+		<script type="text/javascript">
+			(function (document) {
+				var _initSize = 20;
+				
+				function $$ (selector, context) {
+					context = context || document;
+					var elements = context.querySelectorAll(selector);
+					return Array.prototype.slice.call(elements);
+				}
+				
+				$$(".btn-add")[0].addEventListener("click", function () {
+					_initSize += 5;
+					
+					$$(".btn-list")[0].style.fontSize = _initSize + "px";
+				});
+			})(document)
+		</script>
+	</body>
+
+</html>

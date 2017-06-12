@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>gradient</title>
+		<style type="text/css">
+			.gradient {
+				width: 200px;
+				height: 140px;
+				margin: 20px auto;
+			}
+			
+			.gradient01 {
+				background-image: linear-gradient(white, gray);
+				background-size: 100px 47px;
+				background-repeat: repeat-y;
+			}
+			
+			.gradient02 {
+				height: 200px;
+				border-radius: 50%;
+				background-image: radial-gradient(circle, #006, #00a 90%, #0000af 100%, white 100%);
+			}
+			
+			@keyframes ants {
+				to {
+					background-position: 100%
+				}
+			}
+			
+			.gradient03 {
+				padding: 1em;
+				border: 2px solid transparent;
+				background: linear-gradient(white, white) padding-box, repeating-linear-gradient(-45deg, red 0, red 25%, white 0, white 50%) 0 / .6em .6em;
+				animation: ants 12s linear infinite;
+			}
+			
+			.gradient04 {
+				background: #fb3;
+				background: linear-gradient(#fb3 33.33%, #58a 0, #58a 66.66%, #0ff 0);
+			}
+			
+			.gradient05 {
+				background: #fb3;
+				background: repeating-linear-gradient(60deg, #fb3, #fb3 15px, #58a 0, #58a 30px, #fb3 0);
+			}
+			
+			.gradient06 {
+				background-color: yellow;
+				background-image: radial-gradient(5em circle, blue, yellow)
+			}
+			
+			.gradient07 li {
+				list-style: radial-gradient(circle, #006, #00a 90%, #0000af 100%, white 100%);
+			}
+			
+			.gradient08 {
+				background: #fb3;
+				background-image: repeating-linear-gradient(45deg, transparent, transparent 15px, #58a 0, #58a 30px, transparent 0);
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="gradient gradient01"></div>
+		<div class="gradient gradient02"></div>
+		<div class="gradient gradient03">I have a nice stone art border, don’t I look pretty?</div>
+		<div class="gradient gradient04"></div>
+		<div class="gradient gradient05"></div>
+		<div class="gradient gradient06"></div>
+		<div class="gradient gradient07">
+			<ul>
+				<li></li>
+			</ul>
+		</div>
+		<div class="gradient gradient08"></div>
+		<div class="gradient gradient09"></div>
+		<div class="gradient gradient10"></div>
+		
+		<!--<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>-->
+		<script src="jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var obj = {};
+			$(".gradient").each(function (i, item) {
+				// i --> index
+				// item --> 当前执行到的dom，相当于this
+				console.table("item:" + i, item)
+				console.log("$(item):" + i, $(item));
+				console.log(this === item) // true
+//				console.table()
+			});
+		</script>
+	</body>
+
+</html>

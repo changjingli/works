@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jquery 插件开发</title>
+	<style type="text/css">
+		.news-item-link {
+			
+		}
+	</style>
+</head>
+<body>
+	<div id="d1"></div>
+	<ul class="news">
+		<li class="news-item"><a href="" class="news-item-link"></a></li>
+		<li class="news-item"><a href="" class="news-item-link"></a></li>
+		<li class="news-item"><a href="" class="news-item-link"></a></li>
+		<li class="news-item"><a href="" class="news-item-link"></a></li>
+		<li class="news-item"><a href="" class="news-item-link"></a></li>
+	</ul>
+
+	<script src="../libs/jquery-3.2.1.js"></script>
+	<script type="text/javascript">
+		$.fn.extend({
+			initDiv: function () {
+				$(this).css({
+					"widt;h": "200px",
+					"height": "30px",
+					"background": "orange"
+				});
+			}
+		});
+	</script>
+</body>
+</html>
